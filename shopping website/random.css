@@ -89,7 +89,7 @@ body{
     display: none;
 }
 
-/* .header .search-form{
+.header .search-form{
     position: absolute;
     top: 115%;
     right: 7%;
@@ -124,7 +124,7 @@ body{
 
 .header .search-form label:hover{
     color: var(--main-color);
-} */
+}
 
 .header .cart-items-cntainer{
     position: absolute;
