@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mooli&family=Poppins:wght@200&display=swap');
 
 :root{
-    --main-color: #dc8c0b;
+    --main-color: #e7a53d;
     --black: #13131a;
     --bg: hsl(39, 58%, 85%);
     --border: .1rem solid rgba(255,255,255,.3);
@@ -43,65 +43,81 @@ body{
     background: var(--bg);
 }
 
+/* for all buttons common property */
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+}
+
 .header{
     background: var(--bg);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 7%;
-    border-bottom: var(--border);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    border-bottom: var(--border); /* navbar bottom border */
+    position: fixed; /* navbar position fixed */
+    top: 0; left: 0; right: 0;
     z-index: 1000;
 }
 
+/* navbar logo size */
 .header .logo img{
     height: 6rem;
 }
 
 .header .navbar a{
-    margin: 0 1rem;
-    font-size: 1.6rem;
+    margin: 0 1rem; /* navbar font margin */
+    font-size: 1.9rem;
     color: rgb(46, 46, 46);
-    font-size: 2rem;
 }
 
+/* navbar font hover */
 .header .navbar a:hover{
     color: var(--main-color);
-    border-bottom: .1rem solid var(--main-color);
-    padding-bottom: .5rem;
+    border-bottom: .1rem solid var(--main-color); /* line to hover */
+    padding-bottom: .3rem; /* navbar hover font line */
 }
 
-.header .icons div{
+.header .icons div {
     color: rgb(57, 57, 57);
     cursor: pointer;
-    font-size: 2.5rem;
-    margin-left: 2rem;
+    font-size: 2.5rem; /* icon size */
+    margin-left: 2rem; /* between two icons margin */
 }
 
 .header .icons div:hover{
     color:var(--main-color);
 }
 
+/* three line menu btn */
 #menu-btn{
     display: none;
 }
 
+/* search form section start */
 .header .search-form{
     position: absolute;
-    top: 115%;
-    right: 7%;
+    top: 115%; right: 7%;
     background: #fff;
     width: 50rem;
     height: 5rem;
     display: flex;
     align-items: center;
-    transform: scaleY(0);
-    transform-origin: top;
+    transform: scaleY(0); /* for hide seaarch form */
+    transform-origin: top; /* for start display of search form on top side */
 }
 
+ /* for search, click search button and get search options */
 .header .search-form.active{
     transform: scaleY(1);
 }
@@ -109,7 +125,7 @@ body{
 .header .search-form input{
     height: 100%;
     width: 100%;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     color: var(--black);
     padding: 1rem;
     text-transform: none;
@@ -117,15 +133,17 @@ body{
 
 .header .search-form label{
     cursor: pointer;
-    font-size: 2.2rem;
+    font-size: 2.2rem; /* search icon size */
     margin-right: 1.5rem;
     color: var(--black);
 }
 
+/* search icon hover */
 .header .search-form label:hover{
     color: var(--main-color);
 }
 
+/* cart-item container start */
 .header .cart-items-cntainer{
     position: absolute;
     top: 100%;
@@ -136,6 +154,7 @@ body{
     padding: 0 1.5rem;
 }
 
+ /* for cart-item, cart button and get options */
 .header .cart-items-cntainer.active{
     right: 0;
 }
@@ -150,28 +169,30 @@ body{
 
 .header .cart-items-cntainer .cart-item .fa-times{
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 2rem;
+    top: 1rem; /* x top 1rem */
+    right: 1rem; /* x right 1rem */
+    font-size: 2rem; /* x size */
     cursor: pointer;
     color: var(--black);
 }
 
 .header .cart-items-cntainer .cart-item .fa-times:hover{
-    color: var(--main-color);
+    color: var(--main-color); /* x hover */
 }
 
 .header .cart-items-cntainer .cart-item img{
-    aspect-ratio: 9/6; /*for all img same size */
-    height: 7rem;
+    aspect-ratio: 9/9; 
+    height: 9rem;
 }
 
+/* cart-item fonts */
 .header .cart-items-cntainer .cart-item .content h3{
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--black);
     padding-bottom: .5rem;
 }
 
+/* for price size, color */
 .header .cart-items-cntainer .cart-item .content .price{
     font-size: 1.5rem;
     color: var(--main-color);
@@ -244,7 +265,7 @@ body{
     position: absolute;
     top: 100%;
     right: -100%;
-    background: #fff;
+    background: var(--main-color);
     width: 33rem;
     height: calc(100vh - 9.5rem);
   }
@@ -254,11 +275,17 @@ body{
   }
 
   .header .navbar a{
-    color: var(--black);
+    color: white;
     display: block;
     margin: 1.5rem;
     padding: .5rem;
     font-size: 2rem;
+  }
+
+  .header .navbar a:hover{
+    color: var(--black);
+    border-bottom: .1rem solid var(--black); /* line to hover */
+    padding-bottom: .5rem; /* navbar hover font line */
   }
 
   .header .search-form{
