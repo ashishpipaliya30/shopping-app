@@ -43,6 +43,11 @@ body{
     background: var(--bg);
 }
 
+/* for all section class */
+section{
+    padding: 2rem 7%;
+}
+
 /* for all buttons common property */
 .btn{
     margin-top: 1rem;
@@ -213,21 +218,26 @@ body{
 }
 
 .home .content{
-    max-width: 60rem;
+    max-width: 68rem;
 }
 
 .home .content h3{
-    font-size: 6rem;
+    font-size: 5rem;
     text-transform: uppercase;
-    color: #fff;
+    color: #202020;
+    text-shadow: 3px 3px 5px wheat;
 }
 
 .home .content p{
     font-size: 2rem;
-    font-weight: lighter;
-    line-height: 1.8;
+    font-weight: 350;
+    line-height: 1.5;
     padding: 1rem 0;
-    color: #eee;
+    color: #202020;
+}
+
+.home .content .btn{
+   color: #202020;
 }
 
 
@@ -279,6 +289,10 @@ body{
     }
     .home .conent p{
         font-size: 1.5rem;
+    }
+
+    section{
+        padding: 2rem;
     }
 }
 
