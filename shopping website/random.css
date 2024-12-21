@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mooli&family=Poppins:wght@200&display=swap');
 
 :root{
-    --main-color: #e7a53d;
+    --main-color: #eca32d;
     --black: #13131a;
     --bg: hsl(39, 58%, 85%);
-    --border: .1rem solid rgba(255,255,255,.3);
+    --border: .1rem solid rgba(0, 0, 0, 0.3);
 }
 
 *{
@@ -48,13 +48,28 @@ section{
     padding: 2rem 7%;
 }
 
+/* for all heading */
+.heading{
+    text-align: center;
+    color: #fe2600;
+    text-transform: uppercase;
+    padding-bottom: 2.6rem;
+    font-size: 4rem;
+    text-shadow: 1px 2px 2px #202020;
+}
+
+.heading span{
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
 /* for all buttons common property */
 .btn{
     margin-top: 1rem;
     display: inline-block;
     padding: .9rem 3rem;
     font-size: 1.7rem;
-    color: #fff;
+    color: black;
     background: var(--main-color);
     cursor: pointer;
 }
@@ -236,11 +251,107 @@ section{
     color: #202020;
 }
 
-.home .content .btn{
-   color: #202020;
+/* About section start */
+.about .row{
+    display: flex;
+    align-items: center;
+    background-color: #fcb54a;
+    flex-wrap: wrap;
 }
 
+.about .row .image{
+    flex: 1 1 45rem;
+}
 
+.about .row .image img{
+    width: 100%;
+}
+
+.about .row .content{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color: #2e1818;
+}
+
+.about .row .content p{
+    font-size: 1.6rem;
+    color: #2e1818;
+    padding: 1rem 0;
+    line-height: 1.6;
+}
+/* About section end */
+
+
+/* Collection section start */
+.collection .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.collection .box-container .box{
+    text-align: center;
+    border: var(--border);
+    padding: 2rem;
+    /* background-color: #e4ae5c; */
+}
+
+.collection .box-container .box:hover{
+    background-color: #edd0a5;
+}
+
+.collection .box-container .box .icons a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    border: var(--border);
+    color: #000000;
+    margin: .3rem;
+}
+
+.collection .box-container .box .icons a:hover{
+    background: var(--main-color);
+}
+
+.collection .box-container .box .image{
+    padding: 2.5rem 0;
+}
+
+.collection .box-container .box .image img{
+    height: 25rem;
+    aspect-ratio: 5/5;
+}
+
+.collection .box-container .box .content h3{
+    color: #222020;
+    font-size: 2.5rem;
+}
+
+.collection .box-container .box .content .stars{
+    padding: 1.5rem;
+}
+
+.collection .box-container .box .content .stars i{
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+
+.collection .box-container .box .content .price{
+    color: #191616;
+    font-size: 2.5rem;
+}
+
+.collection .box-container .box .content .price span{
+    text-decoration: line-through;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+/* Collection section end */
 
 
 
