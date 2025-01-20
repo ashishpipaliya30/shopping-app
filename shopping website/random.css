@@ -385,7 +385,7 @@ section{
 .review .box-container .box span{
     padding: 1rem 0;
     font-size: 2rem;
-}
+
 
 .review .box-container .box .stars{
     text-align: center;
@@ -492,4 +492,5 @@ section{
     html{
         font-size: 50%;
     }
+}
 }
